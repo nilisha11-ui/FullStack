@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Full Stack Development</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Full Stack Dev</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="html-page.html">HTML</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="css-page.html">CSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bootstrap-page.html">Bootstrap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="javascript-page.html">JavaScript</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center mb-5">JavaScript Programming</h1>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">What is JavaScript?</h2>
+                        <p class="card-text">
+                            JavaScript is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. JavaScript enables interactive web pages and is an essential part of web applications.
+                        </p>
+                        <p class="card-text">
+                            JavaScript can be used for client-side and server-side development, making it a versatile language for full-stack development.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <h5>JavaScript Syntax</h5>
+                            </div>
+                            <div class="card-body">
+                                <pre><code>// Variables
+let name = "Lana";
+const age = 30;
+var city = "London";
+
+// Functions
+function greet(name) {
+    return "Hello " + name;
+}
+
+// Arrow Functions
+const multiply = (a, b) => a * b;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <h5>JavaScript Data Types</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><code>String</code> - Text data</li>
+                                    <li class="list-group-item"><code>Number</code> - Numeric data</li>
+                                    <li class="list-group-item"><code>Boolean</code> - True/False</li>
+                                    <li class="list-group-item"><code>Array</code> - Ordered collections</li>
+                                    <li class="list-group-item"><code>Object</code> - Key-value pairs</li>
+                                    <li class="list-group-item"><code>null</code> and <code>undefined</code></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>JavaScript Demonstration</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Interactive Calculator:</h4>
+                                <div class="calculator-demo">
+                                    <input type="number" id="num1" class="form-control mb-2" placeholder="Enter first number">
+                                    <input type="number" id="num2" class="form-control mb-2" placeholder="Enter second number">
+                                    <div class="btn-group mb-3" role="group">
+                                        <button class="btn btn-outline-primary" onclick="calculate('+')">+</button>
+                                        <button class="btn btn-outline-primary" onclick="calculate('-')">-</button>
+                                        <button class="btn btn-outline-primary" onclick="calculate('*')">×</button>
+                                        <button class="btn btn-outline-primary" onclick="calculate('/')">÷</button>
+                                    </div>
+                                    <div class="alert alert-info" id="result">Result will appear here</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Color Changer:</h4>
+                                <div class="color-demo">
+                                    <button class="btn btn-primary mb-2" onclick="changeColor()">Change Background Color</button>
+                                    <div id="colorBox" class="p-4 border rounded">
+                                        <p class="mb-0">This box changes color randomly!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <h4>Counter with Local Storage:</h4>
+                                <div class="counter-demo">
+                                    <h5>Count: <span id="counter">0</span></h5>
+                                    <button class="btn btn-success me-2" onclick="increment()">Increment</button>
+                                    <button class="btn btn-danger me-2" onclick="decrement()">Decrement</button>
+                                    <button class="btn btn-warning" onclick="reset()">Reset</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Form Validation:</h4>
+                                <div class="form-demo">
+                                    <input type="email" id="email" class="form-control mb-2" placeholder="Enter email">
+                                    <input type="password" id="password" class="form-control mb-2" placeholder="Enter password">
+                                    <button class="btn btn-primary" onclick="validateForm()">Validate</button>
+                                    <div id="validationResult" class="mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <h4>Array Operations:</h4>
+                                <div class="array-demo">
+                                    <button class="btn btn-info me-2" onclick="addItem()">Add Item</button>
+                                    <button class="btn btn-warning me-2" onclick="removeItem()">Remove Item</button>
+                                    <button class="btn btn-success me-2" onclick="sortItems()">Sort Items</button>
+                                    <button class="btn btn-danger" onclick="clearItems()">Clear All</button>
+                                    <div class="mt-3">
+                                        <strong>Items:</strong> <span id="itemList">No items</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h5>JavaScript Best Practices</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Use meaningful variable and function names</li>
+                            <li class="list-group-item">Always declare variables with let, const, or var</li>
+                            <li class="list-group-item">Use strict mode for better error checking</li>
+                            <li class="list-group-item">Handle errors with try-catch blocks</li>
+                            <li class="list-group-item">Use modern ES6+ features when possible</li>
+                            <li class="list-group-item">Comment your code for complex logic</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Full Stack Development Assignment. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

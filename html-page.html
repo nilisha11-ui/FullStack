@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Full Stack Development</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Full Stack Dev</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="html-page.html">HTML</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="css-page.html">CSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bootstrap-page.html">Bootstrap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript-page.html">JavaScript</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container main-content">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center mb-5">HTML (HyperText Markup Language)</h1>
+                
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">What is HTML?</h2>
+                        <p class="card-text">
+                            HTML is the standard markup language for creating web pages. It describes the structure of a web page semantically and originally included cues for the appearance of the document.
+                        </p>
+                        <p class="card-text">
+                            HTML elements tell the browser how to display the content. HTML elements are represented by tags.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <h5>Basic HTML Structure</h5>
+                            </div>
+                            <div class="card-body">
+                                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Heading&lt;/h1&gt;
+    &lt;p&gt;Paragraph&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <h5>Common HTML Tags</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> - Headings</li>
+                                    <li class="list-group-item"><code>&lt;p&gt;</code> - Paragraphs</li>
+                                    <li class="list-group-item"><code>&lt;div&gt;</code> - Division/Container</li>
+                                    <li class="list-group-item"><code>&lt;span&gt;</code> - Inline container</li>
+                                    <li class="list-group-item"><code>&lt;a&gt;</code> - Links</li>
+                                    <li class="list-group-item"><code>&lt;img&gt;</code> - Images</li>
+                                    <li class="list-group-item"><code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code> - Lists</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>HTML Demonstration</h5>
+                    </div>
+                    <div class="card-body">
+                        <h3>This is an H3 heading</h3>
+                        <p>This is a paragraph demonstrating HTML text formatting.</p>
+                        <p><strong>This text is bold</strong> and <em>this text is italic</em>.</p>
+                        
+                        <h4>Lists Example:</h4>
+                        <ul>
+                            <li>Unordered list item 1</li>
+                            <li>Unordered list item 2</li>
+                            <li>Unordered list item 3</li>
+                        </ul>
+                        
+                        <ol>
+                            <li>Ordered list item 1</li>
+                            <li>Ordered list item 2</li>
+                            <li>Ordered list item 3</li>
+                        </ol>
+
+                        <h4>Links and Images:</h4>
+                        <p>Visit <a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Tutorial</a> for more information.</p>
+                        <p>HTML is the foundation of web development!</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h5>HTML Best Practices</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Always use proper DOCTYPE declaration</li>
+                            <li class="list-group-item">Use semantic HTML elements</li>
+                            <li class="list-group-item">Include alt attributes for images</li>
+                            <li class="list-group-item">Use proper heading hierarchy (h1, h2, h3...)</li>
+                            <li class="list-group-item">Validate your HTML code</li>
+                            <li class="list-group-item">Keep your code clean and well-indented</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Full Stack Development Assignment. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
